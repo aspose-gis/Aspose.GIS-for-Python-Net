@@ -1,0 +1,23 @@
+cellSize: Width: 1; Height: 1
+extent: Min (X = 0, Y = -50), Max (X = 50, Y = 0)
+spatialRefSys: 'no srs'
+bounds: X: 0; Y: 0; Width: 50; Height: 50;
+bandCount: 3
+
+Band: 0
+dataType: 3
+statistics: Min: 32; Max: 32; Mean: 32; Sum: 28800; Count: 900
+hasNoData: True
+noData: 0.0
+
+Band: 1
+dataType: 3
+statistics: Min: 255; Max: 255; Mean: 255; Sum: 114750; Count: 450
+hasNoData: True
+noData: 0.0
+
+Band: 2
+dataType: 3
+statistics: Min: 255; Max: 255; Mean: 255; Sum: 114750; Count: 450
+hasNoData: True
+noData: 0.0

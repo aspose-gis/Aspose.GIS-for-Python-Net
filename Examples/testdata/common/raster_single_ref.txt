@@ -1,0 +1,8 @@
+cellSize: Width: 10; Height: 10
+extent: Min (X = -40.5, Y = 25.25), Max (X = 9.5, Y = 55.25)
+spatialRefSys: 'no srs'
+bounds: X: 0; Y: 0; Width: 5; Height: 3;
+bandCount: 1
+nodata: -99.0
+dataType: 10
+statistics: Min: -332; Max: 350; Mean: -36,96153846153846; Sum: -480,5; Count: 13
