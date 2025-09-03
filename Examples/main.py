@@ -3,6 +3,14 @@
 from aspose.gis import License
 
 from releases.Release_24_12_Tests import Release_24_12_Tests
+from releases.Release_25_01_Tests import Release_25_01_Tests
+from releases.Release_25_02_Tests import Release_25_02_Tests
+from releases.Release_25_03_Tests import Release_25_03_Tests
+from releases.Release_25_04_Tests import Release_25_04_Tests
+from releases.Release_25_05_Tests import Release_25_05_Tests
+from releases.Release_25_06_Tests import Release_25_06_Tests
+from releases.Release_25_07_Tests import Release_25_07_Tests
+from releases.Release_25_08_Tests import Release_25_08_Tests
 from showcases.Convert_Tests import Convert_Tests
 from showcases.CsvLayers_Tests import CsvLayers_Tests
 
@@ -24,8 +32,34 @@ from showcases.WriteLayer_Tests import WriteLayer_Tests
 
 
 def run_releases_tests():
+    release25_08 = Release_25_08_Tests()
+    release25_08.RunAllTests()
+
+    release25_07 = Release_25_07_Tests()
+    release25_07.RunAllTests()
+
+    release25_06 = Release_25_06_Tests()
+    release25_06.RunAllTests()
+
+    release25_05 = Release_25_05_Tests()
+    release25_05.RunAllTests()
+
+    release25_04 = Release_25_04_Tests()
+    release25_04.RunAllTests()
+
+    release25_03 = Release_25_03_Tests()
+    release25_03.RunAllTests()
+
+    release25_02 = Release_25_02_Tests()
+    release25_02.RunAllTests()
+
+    release25_01 = Release_25_01_Tests()
+    release25_01.RunAllTests()
+
     release24_12 = Release_24_12_Tests()
     release24_12.RunAllTests()
+
+
 
 def run_showcases_tests():
     showcases = [
@@ -58,6 +92,6 @@ if __name__ == '__main__':
     # Temporary license can be obtained on https://purchase.aspose.com/temporary-license/
 
     lic = License()
-    lic.set_license("PathToYourLicense")
+    lic.set_license("PathToLicense")
     run_showcases_tests()
     run_releases_tests()

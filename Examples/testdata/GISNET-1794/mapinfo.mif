@@ -1,0 +1,14 @@
+Version 300
+Charset "Neutral"
+Columns 9
+Integer Integer
+Long Largeint
+Boolean Logical
+Double Float
+Date Date
+DateTime DateTime
+Time Time
+String Char (80)
+Guid Char (36)
+Data
+NONE
