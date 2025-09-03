@@ -65,6 +65,13 @@ class BaseTests:
 
         return outputPath
 
+    def GetBaseFolder(self):
+        testName = inspect.stack()[1][3]
+        issueFolder = FolderSettings.GetFolderNameFromTestName(testName)
+
+        baseFolder = FolderSettings.BaseTestFolder()
+        finalPath = os.path.join(baseFolder, issueFolder)
+        return finalPath
 
 
     # Runs all methods of class that end with "Test"

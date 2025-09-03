@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.opengis.net/examples"
+xmlns="http://www.w3.org/2001/XMLSchema"
+xmlns:gml="http://www.opengis.net/gml"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:ex="http://www.opengis.net/examples"
+elementFormDefault="qualified"
+version="2.1.2">
+	<annotation>
+		<appinfo>city.xsd v2.1.2 2002-07</appinfo>
+		<documentation xml:lang="en">
+			GML schema for the Cambridge example
+		</documentation>
+	</annotation>
+	<!-- import constructs from the GML Feature and Geometry schemas -->
+	<import namespace="http://www.opengis.net/gml" schemaLocation="feature.xsd"/>
+	<!-- bring in the XLink namespace -->
+	<import namespace="http://www.w3.org/1999/xlink"/>
+	<!-- ==============================================================
+global element declarations
+=================================================================== -->
+	<element name="CityModel" type="ex:CityModelType"/>
+	<element name="cityMember" type="ex:CityMemberType" substitutionGroup="gml:featureMember"/>
+	<element name="Road" type="ex:RoadType" substitutionGroup="ex:_CityFeature"/>
+	<element name="River" type="ex:RiverType" substitutionGroup="ex:_CityFeature"/>
+	<element name="Mountain" type="ex:MountainType" substitutionGroup="gml:_Feature"/>
+	<!-- a label for restricting membership in the CityModel collection -->
+	<element name="_CityFeature" type="gml:AbstractFeatureType" abstract="true" substitutionGroup="gml:_Feature"/>
+	<!-- ==============================================================
+type definitions for city model
+=================================================================== -->
+	<complexType name="CityModelType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureCollectionType">
+				<sequence>
+					<element name="dateCreated" type="gYearMonth"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="CityMemberType">
+		<annotation>
+			<documentation>
+				A cityMember is restricted to those features (or featurecollections) that are declared equivalent to ex:_CityFeature.
+			</documentation>
+		</annotation>
+		<complexContent>
+			<restriction base="gml:FeatureAssociationType">
+				<sequence minOccurs="0">
+					<element ref="ex:_CityFeature"/>
+				</sequence>
+				<attributeGroup ref="xlink:simpleAttrs"/>
+				<attribute ref="gml:remoteSchema" use="optional"/>
+			</restriction>
+		</complexContent>
+	</complexType>
+	<complexType name="RiverType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element ref="gml:centerLineOf"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RoadType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="linearGeometry" type="gml:LineStringPropertyType"/>
+					<element name="classification" type="string"/>
+					<element name="number" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- this is just here to demonstrate membership restriction -->
+	<complexType name="MountainType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="elevation" type="integer"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>
