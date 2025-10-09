@@ -32,6 +32,9 @@ from showcases.WriteLayer_Tests import WriteLayer_Tests
 
 
 def run_releases_tests():
+    release25_09 = Release_25_09_Tests()
+    release25_09.RunAllTests()
+
     release25_08 = Release_25_08_Tests()
     release25_08.RunAllTests()
 
