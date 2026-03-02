@@ -1,0 +1,63 @@
+{
+  "type": "FeatureCollection",
+  "name": "Geodata of Moscow",
+  "metadata": {
+    "creator": "GIS Department",
+    "created": "2024-01-15",
+    "version": "1.0",
+    "description": "Moscow geodata samples"
+  },
+  "bbox": [ 37.3686, 55.5692, 37.8543, 55.9111 ],
+  "features": [
+    {
+      "type": "Feature",
+      "id": "building_001",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 37.6176, 55.7558 ],
+            [ 37.6177, 55.7559 ],
+            [ 37.6178, 55.7558 ],
+            [ 37.6177, 55.7557 ],
+            [ 37.6176, 55.7558 ]
+          ]
+        ]
+      },
+      "bbox": [ 37.6176, 55.7557, 37.6178, 55.7559 ],
+      "properties": {}
+    },
+    {
+      "type": "Feature",
+      "id": "road_001",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [ 37.6173, 55.7571 ],
+          [ 37.6176, 55.7568 ],
+          [ 37.6180, 55.7565 ]
+        ]
+      },
+      "properties": {}
+    },
+    {
+      "type": "Feature",
+      "id": "park_001",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [ 37.6123, 55.7612 ],
+              [ 37.6135, 55.7613 ],
+              [ 37.6140, 55.7608 ],
+              [ 37.6128, 55.7605 ],
+              [ 37.6123, 55.7612 ]
+            ]
+          ]
+        ]
+      },
+      "properties": {}
+    }
+  ]
+}
