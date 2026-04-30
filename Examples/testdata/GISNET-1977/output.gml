@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<app:FeatureCollection xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:app="http://example.org/app" xmlns:ogr="http://ogr.maptools.org/" xsi:schemaLocation="http://example.org/app http://schemas.opengis.net/gml/2.1.2/feature.xsd" />
