@@ -18,8 +18,8 @@ class LicenseHelper:
             return
         license = License()
         licenseFolder = FolderSettings.BaseLicenseFolder()
-        licensePath = os.path.join(licenseFolder, "Aspose.GIS.Python.via.NET.lic")
-        license.set_license(licensePath)
+        #licensePath = os.path.join(licenseFolder, "Aspose.GIS.Python.via.NET.lic")
+        license.set_license("C:\Projects\python2net-gis\Tests\src\license\Aspose.GIS.Python.via.NET.lic")
         LicenseHelper.isLicensed = True
 
     @staticmethod
