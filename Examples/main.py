@@ -19,6 +19,8 @@ from releases.Release_26_01_Tests import Release_26_01_Tests
 from releases.Release_26_02_Tests import Release_26_02_Tests
 from releases.Release_26_03_Tests import Release_26_03_Tests
 from releases.Release_26_04_Tests import Release_26_04_Tests
+from releases.Release_26_05_Tests import Release_26_05_Tests
+from releases.Release_26_06_Tests import Release_26_06_Tests
 from showcases.Convert_Tests import Convert_Tests
 from showcases.CsvLayers_Tests import CsvLayers_Tests
 
@@ -40,6 +42,12 @@ from showcases.WriteLayer_Tests import WriteLayer_Tests
 
 
 def run_releases_tests():
+    release26_06 = Release_26_06_Tests()
+    release26_06.RunAllTests()
+
+    release26_05 = Release_26_05_Tests()
+    release26_05.RunAllTests()
+
     release26_04 = Release_26_04_Tests()
     release26_04.RunAllTests()
 
