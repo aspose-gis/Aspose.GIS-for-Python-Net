@@ -1,0 +1,4 @@
+topojson_object_name,prop0,prop1,prop1_this,GeometryWkt
+"example","value0",,,"POINT (102.000200020002 0.5000500050005001)"
+"example","value0","0",,"LINESTRING (102.000200020002 0, 102.999799979998 1, 103.999899989999 0, 105 1)"
+"example","value0","","that","POLYGON ((100 0, 100 1, 101.000100010001 1, 101.000100010001 0, 100 0))"
